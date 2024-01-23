@@ -14,6 +14,8 @@ import {
 
 import Header from "./components/Header";
 import Main from "./pages/Main";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
 
 // import "semantic-ui-css/semantic.min.css";
 
@@ -33,15 +35,14 @@ function App() {
 		
 		<React.Fragment>
 			<Header></Header>
-			{/* <Router> */}
 			<Routes>
 				<Route exact path="/" element={<Main />}
 				/>
+				<Route path="/login" element={<Login />}
+				/>
+				<Route path="/signup" element={<Signup />}
+				/>
 			</Routes>
-            {/* </Router> */}
-			<div>
-				<Main />
-			</div>
 		</React.Fragment>
 	);
 }

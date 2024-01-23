@@ -5,6 +5,7 @@ import { FaLock } from 'react-icons/fa';
 
 export default function Login() {
 	return (
+    	// <React.Fragment>
 		<div className="wrapper">
 			<form action="">
 				<h1>로그인</h1>
@@ -29,5 +30,7 @@ export default function Login() {
 				</div>
 			</form>
 		</div>
+
+    	// {/* </React.Fragment> */}
 	);
 };

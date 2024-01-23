@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { FaUser } from 'react-icons/fa';
 import { FaLock } from 'react-icons/fa';
 import { VscAccount } from 'react-icons/vsc'
-import { useDispatch } from 'react-redux';
-import { loginUser } from '../LoginUser';
+// import { useDispatch } from 'react-redux';
+// import { loginUser } from '../LoginUser';
 
 export default function Signup() {
 	// const dispatch = useDispatch();
