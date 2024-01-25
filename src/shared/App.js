@@ -11,6 +11,7 @@ import PostList from "../pages/PostList";
 import PostDetail from "../pages/PostDetail";
 import Login from "../pages/Login";
 import Signup from "../pages/Signup";
+import Chat from "../pages/Chat";
 
 import "semantic-ui-css/semantic.min.css";
 
@@ -24,6 +25,7 @@ function App() {
         <Route path="/detail/:daangnProductId" exact component={PostDetail} />
         <Route path="/login" exact component={Login} />
         <Route path="/signup" exact component={Signup} />
+		<Route path="/chat" exact component={Chat} />
       </ConnectedRouter>
     </React.Fragment>
   );

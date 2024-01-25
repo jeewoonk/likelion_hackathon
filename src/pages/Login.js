@@ -19,7 +19,7 @@ export default function Login() {
 				</div>
 
 				<div className="remember-forgot">
-					<label><input type="checkbox" />Remember me</label>
+					<label><input type="checkbox" />로그인 상태 유지</label>
 					<a href="#">비밀번호를 잊어버리셨나요?</a>
 				</div>
 
