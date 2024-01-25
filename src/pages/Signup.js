@@ -37,12 +37,12 @@ export default function Signup() {
 			<form action=''>
 				<h1>회원가입</h1>
 				<div className="input-box">
-					<FaUser className="icon"/>
-					<input type="email" placeholder="사용자 이메일" required></input>
-				</div>
-				<div className="input-box">
 					<VscAccount className="icon"/>
 					<input type="text" placeholder="사용자 아이디" required></input>
+				</div>
+				<div className="input-box">
+					<FaUser className="icon"/>
+					<input type="email" placeholder="사용자 이메일" required></input>
 				</div>
 				<div className="input-box">
 					<FaLock className="icon"/>
@@ -50,7 +50,10 @@ export default function Signup() {
 				</div>
 				<div className="input-box">
 					<FaLock className="icon"/>
-					<input type="password" placeholder="비밀번호를 다시 한 번 입력해주세요" required></input>
+					<input type="password" placeholder="비밀번호 재확인" required></input>
+				</div>
+				<div className="remember-forgot">
+					<label><input type="checkbox" />이용약관과 개인정보 처리 방침을 확인하였습니다.</label>
 				</div>
 				<button type="submit">회원가입</button>
 			</form>
