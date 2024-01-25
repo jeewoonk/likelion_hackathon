@@ -8,8 +8,8 @@ const freshData = [
       description: "코스트코에서 한 팩 샀는데 10개정도 팝니다",
       expiration: "",
       userid: "jeewoon",
-      // image: "../data/images/potato.jpeg",
-      image: "potato.jpeg",
+      image: "../data/images/potato.jpeg",
+      // image: "potato.jpeg",
     },
     {
       foodid: 2,

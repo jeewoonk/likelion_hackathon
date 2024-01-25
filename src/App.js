@@ -16,23 +16,13 @@ import Header from "./components/Header";
 import Main from "./pages/Main";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
+import Category from "./pages/Category";
+import ItemList from "./pages/ItemList";
 
 // import "semantic-ui-css/semantic.min.css";
 
 function App() {
 	return (
-		// <h1>동네 친구들과 식재료 소분하기</h1>
-	// <React.Fragment>
-	// 	<Header></Header>
-	// 	<ConnectedRouter history={history}>
-	// 		<Route path="/" exact component={Main} />
-	// 		{/* <Route path="/list" exact component={PostList} />
-	// 		<Route path="/detail/:daangnProductId" exact component={PostDetail} />
-	// 		<Route path="/login" exact component={Login} />
-	// 		<Route path="/signup" exact component={Signup} /> */}
-	// 	</ConnectedRouter>
-	// </React.Fragment>
-		
 		<React.Fragment>
 			<Header></Header>
 			<Routes>
@@ -41,6 +31,10 @@ function App() {
 				<Route path="/login" element={<Login />}
 				/>
 				<Route path="/signup" element={<Signup />}
+				/>
+				<Route path="/category" element={<Category />}
+				/>
+				<Route path="/itemlist" element={<ItemList />}
 				/>
 			</Routes>
 		</React.Fragment>

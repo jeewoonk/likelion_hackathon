@@ -4,7 +4,7 @@ import styled from "styled-components";
 // import { history } from "../redux/configureStore";
 // import { useNavigate } from "react-router-dom";
 // import { Link } from "react-router-dom";
-import {Routes, Route, useNavigate} from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 
 const Header = (props) => {
@@ -14,18 +14,16 @@ const Header = (props) => {
     <React.Fragment>
       <div
         style={{
-          position: "sticky",
+          // position: "sticky",
           top: "0px",
+          left: "5px",
           width: "100%",
           backgroundColor: "#FFFFFF",
         }}
       >
-        <Grid is_flex padding="5px 0px" width="1024px" margin="auto">
-          <Grid is_start maxwidth="700px">
-            <Image
-              onClick={() => navigate("/")}
-              src="https://d1unjqcospf8gs.cloudfront.net/assets/home/base/header/logo-basic-24b18257ac4ef693c02233bf21e9cb7ecbf43ebd8d5b40c24d99e14094a44c81.svg"
-            ></Image>
+        <Grid is_flex padding="5px 10px" margin="auto">
+          <Grid is_start maxwidth="550px">
+            <Logo onClick={() => navigate("/")}> 자취마켓. </Logo>
             <InputWrap>
               <Grid is_flex>
                 <Input placeholder="식재료를 검색해보세요!"></Input>
@@ -36,23 +34,28 @@ const Header = (props) => {
               </Grid>
             </InputWrap>
           </Grid>
-
-          <Button2
-            // onClick={() => {
-            //   history.push("/login");
-            // }}
-            onClick={() => navigate("/login")}
-          >
-            Log In
-          </Button2>
-          <Button2
-            // onClick={() => {
-            //   history.push("/signup");
-            // }}
-            onClick={() => navigate("/signup")}
-          >
-            Sign Up
-          </Button2>
+          
+          <Grid is_flex maxwidth="500px">
+            <Cat onClick={() => navigate("/")}>
+              FRESH
+            </Cat>
+            <Cat onClick={() => navigate("/")}>
+              PROCESSED
+            </Cat>
+            <Cat onClick={() => navigate("/")}>
+              ESSENTIALS
+            </Cat>
+          </Grid>
+          
+          <Grid is_flex maxwidth="200px">
+            <Button onClick={() => navigate("/login")}>
+              로그인
+            </Button>
+            <Button onClick={() => navigate("/signup")}>
+              회원가입
+            </Button>
+          </Grid>
+          
         </Grid>
       </div>
     </React.Fragment>
@@ -62,6 +65,27 @@ const Header = (props) => {
 Header.defaultProps = {};
 
 export default Header;
+
+// @font-face {
+// 	font-family: 'Gilroy';
+// 	src: local('Gilroy'), url(../fonts/gilroy/Gilroy-Bold.ttf) format('truetype');
+// }  
+
+// const Logo = styled.div`
+//   font-family: Rubik;
+
+// `;
+const Logo = styled.h1`
+  color: #161C2D;
+  text-align: center;
+  @import url(../fonts/Rubik/Rubik-VariableFont_wght.ttf  format('truetype'));
+  font-family: Rubik;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.133px;
+`;
 
 const InputWrap = styled.div`
   border-radius: 5px;
@@ -89,19 +113,16 @@ const Image = styled.img`
   width: 120px;
 `;
 
-const Button = styled.div`
-  display: inline-block;
-  color: #495057;
-  font-size: 14px;
-  margin-left: 8px;
-  font-weight: 700;
+const Cat = styled.h1`
+  width: 120px;
   vertical-align: middle;
-`;
+  font-size: 20px;
+`
 
-const Button2 = styled.button`
-  width: 140px;
-  border-radius: 5px;
-  border: solid 1px #ffdcc5;
+const Button = styled.button`
+  width: 110px;
+  border-radius: 20px;
+  border: solid 1.2px #000000;
   box-sizing: border-box;
   text-decoration: none;
   display: inline-block;
@@ -111,5 +132,6 @@ const Button2 = styled.button`
   height: 40px;
   margin: 0px 5px;
   background-color: #ffffff;
-  color: #666666;
+  color: #000000;
+  font-size: 14px;
 `;

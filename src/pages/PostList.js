@@ -1,22 +1,25 @@
 import React from "react";
 import Post from "../components/Post";
-import SelectButton from "../components/SelectButton";
-import { useDispatch, useSelector } from "react-redux";
-import { history } from "../redux/configureStore";
+// import SelectButton from "../components/SelectButton";
+// import { useDispatch, useSelector } from "react-redux";
+// import { history } from "../redux/configureStore";
+import { Routes, Route, useNavigate } from 'react-router-dom';
+import freshData from "../data/freshData";
 
-import { actionCreators as postActions } from "../redux/modules/post";
+// import { actionCreators as postActions } from "../redux/modules/post";
 
 const PostList = () => {
-  const dispatch = useDispatch();
-  const post_list = useSelector((state) => state.post.list);
+  // const dispatch = useDispatch();
+  // const post_list = useSelector((state) => state.post.list);
+  const navigate = useNavigate();
 
-  const together = post_list.slice(0, 101);
+  // const together = post_list.slice(0, 101);
 
-  React.useEffect(() => {
-    window.scrollTo(0, 0);
+  // React.useEffect(() => {
+  //   window.scrollTo(0, 0);
 
-    dispatch(postActions.getPostDB());
-  }, []);
+  //   dispatch(postActions.getPostDB());
+  // }, []);
 
   return (
     <React.Fragment>
@@ -35,9 +38,9 @@ const PostList = () => {
         }}
       ></div>
 
-      <SelectButton></SelectButton>
+      {/* <SelectButton></SelectButton> */}
 
-      <div
+      {/* <div
         style={{
           width: "980px",
           display: "flex",
@@ -55,15 +58,16 @@ const PostList = () => {
                 marginRight: "44px",
                 marginBottom: "56px",
               }}
-              onClick={() => {
-                history.push(`/detail/${daangnProductId}`);
-              }}
+              // onClick={() => {
+              //   history.push(`/detail/${daangnProductId}`);
+              // }}
+              onClick={() => navigate("/signup")}
             >
               <Post key={p.daangnProductId} {...p} />
             </div>
           );
         })}
-      </div>
+      </div> */}
     </React.Fragment>
   );
 };

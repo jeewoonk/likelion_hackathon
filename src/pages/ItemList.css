@@ -1,0 +1,33 @@
+@font-face {
+    font-family: 'KOTRA_BOLD-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.1/KOTRA_BOLD-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.item-list {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: black;
+}
+
+
+.whole-wrapper {
+	display: flex;
+}
+
+.item {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+  
+.item img {
+max-width: 100px;
+height: auto;
+display: block;
+margin: 0 auto;
+}
+  
