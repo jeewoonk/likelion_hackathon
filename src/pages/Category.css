@@ -15,6 +15,7 @@
 
 .whole-wrapper {
 	display: flex;
+	justify-content: center;
 }
 
 .category {
