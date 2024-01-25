@@ -16,6 +16,7 @@ import Header from "./components/Header";
 import Main from "./pages/Main";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
+import Category from "./pages/Category";
 import Chat from './pages/Chat';
 
 // import "semantic-ui-css/semantic.min.css";
@@ -42,6 +43,8 @@ function App() {
 				<Route path="/login" element={<Login />}
 				/>
 				<Route path="/signup" element={<Signup />}
+				/>
+				<Route path="/category" element={<Category />}
 				/>
 				<Route path="/chat" element={<Chat />}
 				/>
