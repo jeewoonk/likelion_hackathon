@@ -4,15 +4,16 @@
 	box-sizing: border-box;
 }
 
-body {
-	/* display: flex; */
+/* body {
+	display: flex;
 	justify-content: center;
 	align-items: center;
 	min-height: 100vh;
-}
+} */
 
 .wrapper {
 	width: 420px;
+	margin: auto;
 	background-color: transparent;
 	border: 2px solid rgba(255, 255, 255, .2);
 	box-shadow: 0 0 10px rgba(255, 255, 255, .2);
@@ -50,7 +51,7 @@ body {
 	color:rgb(128, 128, 128);
 }
 
-.input-box .icon {
+.input-box .firsticon {
 	position: absolute;
 	right: 20px;
 	top: 50%;

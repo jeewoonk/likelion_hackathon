@@ -11,9 +11,18 @@ hr {
 
 .chat-list {
 	min-width: 40vw;
-	background-color: white;
+	background-color: #f1f1f1;
 	display: flex;
 	flex-direction: column;
+}
+
+.chat-list .firsticon {
+	position: absolute;
+	color: #254232;
+	top: 13%;
+	left: 2%;
+	transform: translateY(-80%);
+	font-size: 25px;
 }
 
 .chat-list h1 {
@@ -27,10 +36,10 @@ hr {
 	appearance: none;
 	width: 95%;
 	height: 8%;
-	background: none;
-	padding: 10px 30px 10px 60px;
+	padding: 10px 30px 10px 70px;
 	margin: 0 10px;
-	border: 3px solid cadetblue;
+	background-color: #f1f1f1;
+	border: 3px solid #254232;
 	border-radius: 100px;
 	font: 20px/1 system-ui, sans-serif;
 }
@@ -83,7 +92,7 @@ hr {
 }
 
 .v-line {
-	border-left: thick solid black;
+	border-left: 2px solid #254232;
 }
 
 .real-chat {
@@ -93,6 +102,20 @@ hr {
 .buyer {
 	margin-left: 50px;
 	display: flex;
+}
+
+.buyer .others {
+	margin: auto;
+}
+.buyer button {
+	width: 100px;
+	height: 35px;
+	margin: 0 20px;
+	color: #254232;
+	border: 2px solid #254232;
+	border-radius: 20px;
+	justify-content: center;
+	align-items: right;
 }
 
 .textbox {
@@ -121,7 +144,7 @@ hr {
 	background: none;
 	padding: 10px 30px 10px 30px;
 	margin: 0 10px;
-	border: 3px solid cadetblue;
+	border: 3px solid #254232;
 	border-radius: 100px;
 	font: 20px/1 system-ui, sans-serif;
 }
@@ -132,8 +155,8 @@ hr {
 	list-style-type:none;
 	overflow-y:scroll;
 	height:535px;
-	border-top:2px solid #fff;
-	border-bottom:2px solid #fff;
+	border-top:2px solid #254232;
+	border-bottom:2px solid #254232;
 }
 #chat li{
 	padding:10px 30px;
@@ -151,7 +174,6 @@ hr {
 }
 #chat .message{
 	padding:20px;
-	color:#fff;
 	line-height:25px;
 	max-width:90%;
 	display:inline-block;
@@ -162,24 +184,12 @@ hr {
 	text-align:right;
 }
 #chat .you .message{
-	background-color:#58b666;
+	background-color:#254232;
+	color: #b0cebd;
 }
 #chat .me .message{
-	background-color:#6fbced;
-}
-#chat .triangle{
-	width: 0;
-	height: 0;
-	border-style: solid;
-	border-width: 0 10px 10px 10px;
-}
-#chat .you .triangle{
-		border-color: transparent transparent #58b666 transparent;
-		margin-left:15px;
-}
-#chat .me .triangle{
-		border-color: transparent transparent #6fbced transparent;
-		margin-left:375px;
+	background-color:#b0cebd;
+	color: #254232;
 }
 
 
@@ -199,7 +209,7 @@ hr {
 	margin-bottom:13px;
 }
 .typing textarea::placeholder{
-	color:#ddd;
+	color:#254232;
 }
 .typing img{
 	height:30px;
@@ -209,9 +219,9 @@ hr {
 	text-decoration:none;
 	text-transform:uppercase;
 	font-weight:bold;
-	color:#6fbced;
+	color:#254232;
 	vertical-align:top;
-	margin-left:333px;
+	margin-left:450px;
 	margin-top:5px;
 	display:inline-block;
 }

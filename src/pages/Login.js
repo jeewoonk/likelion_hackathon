@@ -11,11 +11,11 @@ export default function Login() {
 				<h1>로그인</h1>
 				<div className="input-box">
 					<input type="email" placeholder="사용자 이메일" required></input>
-					<FaUser className="icon"/>
+					<FaUser className="firsticon"/>
 				</div>
 				<div className="input-box">
 					<input type="password" placeholder="사용자 비밀번호" required></input>
-					<FaLock className="icon"/>
+					<FaLock className="firsticon"/>
 				</div>
 
 				<div className="remember-forgot">

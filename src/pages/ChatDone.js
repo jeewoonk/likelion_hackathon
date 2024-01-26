@@ -40,8 +40,6 @@ export default function Chat() {
 					<div className="buyer">
 						<div className="pic p1" />
 						<div><h1>얼바인 공주</h1></div>
-						<button>거래 완료</button>
-						<button>신고하기</button>
 						<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/ico_star.png" className="star"></img>
 					</div>
 
