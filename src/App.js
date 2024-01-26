@@ -12,12 +12,13 @@ import {
 } from "react-router-dom";
  
 
-import Header from "./components/Header";
+import Header from "./pages/Header";
 import Main from "./pages/Main";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Category from "./pages/Category";
 import ItemList from "./pages/ItemList";
+import Item from "./pages/Item";
 import Chat from './pages/Chat';
 
 // import "semantic-ui-css/semantic.min.css";
@@ -47,7 +48,13 @@ function App() {
 				/>
 				<Route path="/category" element={<Category />}
 				/>
-				<Route path="/itemlist" element={<ItemList />}
+				<Route path="/category/fresh" element={<ItemList />}
+				/>
+				<Route path="/category/processed" element={<ItemList />}
+				/>
+				<Route path="/category/essential" element={<ItemList />}
+				/>
+				<Route path="/category/fresh/itemid=1" element={<Item />}
 				/>
 				<Route path="/chat" element={<Chat />}
 				/>

@@ -1,22 +1,23 @@
 import React from 'react';
 import './Category.css';
+import { useNavigate, useParams } from 'react-router-dom';
+
 import { FaCarrot } from 'react-icons/fa';
 import { BiSolidBaguette } from "react-icons/bi";
 import { FaFlask } from "react-icons/fa";
-import { useNavigate } from 'react-router-dom';
 
 export default function Category() {
 	const navigate = useNavigate();
 
 	const navigatefresh = () => {
-		navigate("fresh");
+		navigate("/category/fresh", {state: { categoryID: 'fresh' }});
 	}
 	const navigateprocessed = () => {
-		navigate("processed");
+		navigate("/category/processed", {state: { categoryID: 'processed' }});
 	}
 
-	const navigateessentials = () => {
-		navigate("essentials");
+	const navigateessential = () => {
+		navigate("/category/essential", {state: { categoryID: 'essential' }});
 	}
 
 
@@ -47,7 +48,7 @@ export default function Category() {
 					<FaFlask className='icon' />
 					<div className="item-name">가정 용품</div>
 					<p className="item-explanation">가정 용품에 대한 설명을 씁시다. 가정 용품에 대한 설명을 씁시다. 가정 용품에 대한 설명을 씁시다.</p>
-					<button onClick={navigateessentials}>시작하기</button>
+					<button onClick={navigateessential}>시작하기</button>
 				</div>
 			</div>
 		</div>

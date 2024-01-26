@@ -7,6 +7,17 @@ import { useNavigate } from 'react-router-dom';
 const Header = (props) => {
   const navigate = useNavigate();
 
+  const navigatefresh = () => {
+		navigate("/category/fresh", {state: { categoryID: 'fresh' }});
+	}
+	const navigateprocessed = () => {
+		navigate("/category/processed", {state: { categoryID: 'processed' }});
+	}
+
+	const navigateessential = () => {
+		navigate("/category/essential", {state: { categoryID: 'essential' }});
+	}
+
   return (
     <React.Fragment>
       <div
@@ -33,13 +44,16 @@ const Header = (props) => {
           </Grid>
           
           <Grid is_flex maxwidth="500px">
-            <Cat onClick={() => navigate("/")}>
+            {/* <Cat onClick={() => navigate("/category/fresh", {state: { categoryID: 'fresh' }})}> */}
+            <Cat onClick={navigatefresh}>
               FRESH
             </Cat>
-            <Cat onClick={() => navigate("/")}>
+            <Cat onClick={navigateprocessed}>
+            {/* <Cat onClick={() => navigate("/category/processed", {state: { categoryID: 'processed' }})}> */}
               PROCESSED
             </Cat>
-            <Cat onClick={() => navigate("/")}>
+            <Cat onClick={navigateessential}>
+            {/* <Cat onClick={() => navigate("/category/essential", {state: { categoryID: 'essential' }})}> */}
               ESSENTIALS
             </Cat>
           </Grid>

@@ -7,32 +7,27 @@ import freshData from '../data/freshData';
 import processedData from '../data/processedData';
 import essentialData from '../data/essentialData';
 
-const ItemList = () => {
+const Item = () => {
 	const navigate = useNavigate();
     const location = useLocation();
 
-    const [categoryID, setcategoryID] = useState(
-        location.state?.categoryID
+    const [itemID, setitemID] = useState(
+        location.state?.itemID
       );
-    console.log(categoryID);
-    // let title = '';
-    // let data = '';
     
     const navigateItem = () => {
-        navigate("/category/{itemid}")
+        navigate("/category/fresh/{itemid}")
     }
     
-    switch (categoryID) {
+    switch (itemID) {
         case 'fresh':
-            // title = 'Fresh Produced Food';
-            // data = freshData;
             return (
                 <div>
                     <H1> Fresh Produced Food </H1>
                     <ItemListContainer>
                         {freshData.map(item => (
                             <ItemContainer key={item.foodid}
-                            onClick={() => navigate("/category/fresh/itemid=1", {state: {itemID: 1}})}>
+                            onClick={() => navigate("/category/fresh/itemid=1")}>
                             {/* onClick={() => navigate("/category/fresh/${item.foodid}")}> */}
                                 <Image src={item.image} />
                                 <h3>{item.title}</h3>
@@ -43,8 +38,6 @@ const ItemList = () => {
                 </div>
             );      
         case 'processed':
-            // title = 'Processed Food';
-            // data = processedData;
             return (
                 <div>
                     <H1> Processed Food </H1>
@@ -60,8 +53,6 @@ const ItemList = () => {
                 </div>
             );      
         case 'essential':
-            // title = 'Home Good Essentials';
-            // data = essentialData;
             return (
                 <div>
                     <H1> Home Good Essentials </H1>
@@ -77,24 +68,9 @@ const ItemList = () => {
                 </div>
             );      
     }
-
-    // return (
-    //     <div>
-    //         <H1> {title} </H1>
-    //         <ItemListContainer>
-    //             {data.map(item => (
-    //                 <ItemContainer key={item.foodid}>
-    //                     <Image src={item.image} />
-    //                     <h3>{item.title}</h3>
-    //                     <p>Price: ${item.price}</p>
-    //                 </ItemContainer>
-    //             ))}
-    //         </ItemListContainer>
-    //     </div>
-    // );      
 };
 
-export default ItemList;
+export default Item;
 
 const H1 = styled.h1`
     font-size: 45px;

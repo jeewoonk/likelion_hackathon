@@ -8,7 +8,7 @@ const Main = () => {
 
   return (
     <React.Fragment>
-      <div style={{ backgroundColor: "#F1F1F1" }}>
+      <div>
         <DIV1>
           <div
             style={{
@@ -43,13 +43,13 @@ const DIV1 = styled.div`
   height: 800px;
   // margin: 0px 100px 0px 200px;
   background-image: url(${main});
-  background-color: #F1F1F1;
   display: flex;
   // align-items: center;
   justify-content: space-evenly;
   background-repeat:no-repeat;
   background-size: cover;
-  background-position: center center;      
+  // background-position: center center;  
+  background-color: transparent;    
 `;
 
 const H1 = styled.h1`
@@ -61,6 +61,7 @@ const H1 = styled.h1`
   // margin-bottom: 2rem;
   letter-spacing: -0.4px;
   font-weight: 900;
+  background-color: transparent;
 `;
 
 const P = styled.p`
@@ -71,6 +72,7 @@ const P = styled.p`
   margin-block-end: 1em;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
+  background-color: transparent;
 `;
 
 const Button = styled.button`
