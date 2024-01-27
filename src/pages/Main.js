@@ -78,7 +78,7 @@ const P = styled.p`
 const Button = styled.button`
   width: 200px;
   height: 70px;
-  // padding-left: 300px;
+  //padding-left: 300px;
   border-radius: 10px;
   border: solid 1.2px #000000;
   box-sizing: border-box;
@@ -86,7 +86,7 @@ const Button = styled.button`
   display: inline-block;
   vertical-align: middle;
   text-align: center;
-  margin: 70px 250px;
+  margin: 70px 110%;
   background-color: #254232;
   color: #fff;
   font-size: 25px;
