@@ -46,6 +46,7 @@ const ItemList = () => {
                             {/* onClick={() => navigate("/category/fresh/itemid=1", {state: {itemID: 1}})}> */}
                             {/* onClick={() => navigate("/category/fresh/${item.foodid}")}> */}
                                 <Image src={item.image} />
+                                {/* <div> drop-shadow(16px 16px red)</div> */}
                                 <H3>{item.title}</H3>
                                 <P>Price: ${item.price}</P>
                             </ItemContainer>
@@ -144,20 +145,23 @@ const ItemListContainer = styled.div`
 `;
 
 const ItemContainer = styled.div`
-    flex: 0 0 calc(23% - 40px);
-    // border: 1px solid #ddd;
+    flex: 0 0 calc(23% - 30px);
+    border: 1px solid #ddd;
     padding: 10px;
     text-align: left;
-    // box-sizing: border-box;
+    box-sizing: border-box;
     // padding: px;
 `;
 
 const H3 = styled.h3`
-    padding: 3px 0px 0px 30px;
+    padding: 8px 0px 0px 30px;
+    letter-spacing: 0.4px;
+    font-weight: 400;
 `
 
 const P = styled.p`
     padding: 3px 0px 0px 30px;
+    font-weight: 500;
 `
 
 const Image = styled.img`
@@ -166,4 +170,5 @@ const Image = styled.img`
 	border-radius: 10px;
     display: block;
     margin: 0 auto;
+    filter: drop-shadow(2px 2px 2px #8e918f);
 `;
