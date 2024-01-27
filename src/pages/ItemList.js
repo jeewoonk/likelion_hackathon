@@ -36,6 +36,9 @@ const ItemList = () => {
             return (
                 <div>
                     <H1> Fresh Produced Food </H1>
+                    <H2> 
+                        fresh produce explanation fresh produce explanation fresh produce explanation
+                    </H2>
                     <ItemListContainer>
                         {freshData.map(item => (
                             <ItemContainer key={item.foodid}
@@ -43,8 +46,8 @@ const ItemList = () => {
                             {/* onClick={() => navigate("/category/fresh/itemid=1", {state: {itemID: 1}})}> */}
                             {/* onClick={() => navigate("/category/fresh/${item.foodid}")}> */}
                                 <Image src={item.image} />
-                                <h3>{item.title}</h3>
-                                <p>Price: ${item.price}</p>
+                                <H3>{item.title}</H3>
+                                <P>Price: ${item.price}</P>
                             </ItemContainer>
                         ))}
                     </ItemListContainer>
@@ -63,11 +66,14 @@ const ItemList = () => {
             return (
                 <div>
                     <H1> Processed Food </H1>
+                    <H2> 
+                        processed food explanation processed food explanation processed food explanation 
+                    </H2>
                     <ItemListContainer>
                         {processedData.map(item => (
                             <ItemContainer key={item.foodid}>
                                 <Image src={item.image} />
-                                <h3>{item.title}</h3>
+                                <H3>{item.title}</H3>
                                 <p>Price: ${item.price}</p>
                             </ItemContainer>
                         ))}
@@ -124,22 +130,32 @@ const H2 = styled.h2`
     font-weight: 300;
     font-color: #A5A5A5;
     text-align: center;
+    margin: 20px;
 `
 
 const ItemListContainer = styled.div`
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 3px;
+    gap: 10px;
 `;
 
 const ItemContainer = styled.div`
-    flex: 0 0 calc(25% - 35px);
+    flex: 0 0 calc(23% - 40px);
     // border: 1px solid #ddd;
     padding: 10px;
-    text-align: center;
-    box-sizing: border-box;
+    text-align: left;
+    // box-sizing: border-box;
+    // padding: px;
 `;
+
+const H3 = styled.h3`
+    padding: 3px 0px 0px 30px;
+`
+
+const P = styled.p`
+    padding: 3px 0px 0px 30px;
+`
 
 const Image = styled.img`
     width: 210px;
