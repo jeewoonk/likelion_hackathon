@@ -18,7 +18,7 @@ import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Category from "./pages/Category";
 import ItemList from "./pages/ItemList";
-import Item from "./pages/Item";
+import ItemDetail from "./pages/ItemDetail";
 import Chat from './pages/Chat';
 
 // import "semantic-ui-css/semantic.min.css";
@@ -54,11 +54,12 @@ function App() {
 				/>
 				<Route path="/category/essential" element={<ItemList />}
 				/>
-				<Route path="/category/fresh/itemid=1" element={<Item />}
+				<Route path="/item/:itemID" element={<ItemDetail />}
 				/>
 				<Route path="/chat" element={<Chat />}
 				/>
 			</Routes>
+			
 		</React.Fragment>
 	);
 }

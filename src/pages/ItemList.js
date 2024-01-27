@@ -1,7 +1,7 @@
-import React from 'react';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import styled from "styled-components";
 import { useNavigate, useLocation } from 'react-router-dom';
+import ItemDetail from './ItemDetail';
 
 import freshData from '../data/freshData';
 import processedData from '../data/processedData';
@@ -9,30 +9,38 @@ import essentialData from '../data/essentialData';
 
 const ItemList = () => {
 	const navigate = useNavigate();
-    const location = useLocation();
+    // const navigateItem = () => {
+    //     navigate("/category/{itemid}")
+    // }
+    const navigateItem = (itemId) => {
+        navigate(`/item/${itemId}`, {state: {itemId: {itemId}}}); // Navigate to the item details page
+    };
 
+    const location = useLocation();
     const [categoryID, setcategoryID] = useState(
         location.state?.categoryID
       );
-    console.log(categoryID);
-    // let title = '';
-    // let data = '';
-    
-    const navigateItem = () => {
-        navigate("/category/{itemid}")
-    }
+    // console.log(categoryID);
+
+    // const [selectedItem, setSelectedItem] = useState(null);
+    // const [modalIsOpen, setModalIsOpen] = useState(false);
+    // const openModal = (item) => {
+    //     setSelectedItem(item);
+    //     setModalIsOpen(true);
+    // };
+    const [selectedItem, setSelectedItem] = useState(null);
+
     
     switch (categoryID) {
         case 'fresh':
-            // title = 'Fresh Produced Food';
-            // data = freshData;
             return (
                 <div>
                     <H1> Fresh Produced Food </H1>
                     <ItemListContainer>
                         {freshData.map(item => (
                             <ItemContainer key={item.foodid}
-                            onClick={() => navigate("/category/fresh/itemid=1", {state: {itemID: 1}})}>
+                            onClick={() => navigateItem(item.foodid)}>
+                            {/* onClick={() => navigate("/category/fresh/itemid=1", {state: {itemID: 1}})}> */}
                             {/* onClick={() => navigate("/category/fresh/${item.foodid}")}> */}
                                 <Image src={item.image} />
                                 <h3>{item.title}</h3>
@@ -40,6 +48,13 @@ const ItemList = () => {
                             </ItemContainer>
                         ))}
                     </ItemListContainer>
+
+                    {/* <ItemDetail 
+                        item={selectedItem} 
+                        isOpen={modalIsOpen} 
+                        onRequestClose={() => setModalIsOpen(false)} 
+                    /> */}
+                    {/* {selectedItem && <ItemDetail item={selectedItem} />} */}
                 </div>
             );      
         case 'processed':
