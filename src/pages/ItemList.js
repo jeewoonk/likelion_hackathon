@@ -74,7 +74,7 @@ const ItemList = () => {
                             <ItemContainer key={item.foodid}>
                                 <Image src={item.image} />
                                 <H3>{item.title}</H3>
-                                <p>Price: ${item.price}</p>
+                                <P>Price: ${item.price}</P>
                             </ItemContainer>
                         ))}
                     </ItemListContainer>
@@ -86,12 +86,15 @@ const ItemList = () => {
             return (
                 <div>
                     <H1> Home Good Essentials </H1>
+                    <H2> 
+                        home good explanation home good explanation home good explanation 
+                    </H2>
                     <ItemListContainer>
                         {essentialData.map(item => (
                             <ItemContainer key={item.foodid}>
                                 <Image src={item.image} />
-                                <h3>{item.title}</h3>
-                                <p>Price: ${item.price}</p>
+                                <H3>{item.title}</H3>
+                                <P>Price: ${item.price}</P>
                             </ItemContainer>
                         ))}
                     </ItemListContainer>
