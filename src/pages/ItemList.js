@@ -9,8 +9,8 @@ import essentialData from '../data/essentialData';
 
 const ItemList = () => {
 	const navigate = useNavigate();
-    const navigateItem = (itemId) => {
-        navigate(`/item/${itemId}`, {state: {itemId: {itemId}}}); // Navigate to the item details page
+    const navigateItem = (itemId, categoryID) => {
+        navigate(`/item/${itemId}`, {state: {itemId: {itemId}}});
     };
 
     const location = useLocation();
@@ -139,7 +139,7 @@ const Button1 = styled.button`
     background-color: #ffffff;
     color: #000000;
     font-size: 14px;
-    font-family: NanumSquareNeo;
+    font-family: Nanum;
 `
 
 const Button2 = styled.button`
@@ -157,7 +157,7 @@ const Button2 = styled.button`
     background-color: #ffffff;
     color: #000000;
     font-size: 14px;
-    font-family: NanumSquareNeo;
+    font-family: Nanum;
 `
 
 const ItemListContainer = styled.div`
@@ -174,7 +174,7 @@ const ItemContainer = styled.div`
     text-align: left;
     box-sizing: border-box;
     // padding: px;
-    font-family: NanumSquareNeo;
+    font-family: Nanum;
 `;
 
 const H3 = styled.h3`
