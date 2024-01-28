@@ -27,7 +27,8 @@ Companionship에 초점을 맞춤
 
 ### 1. 메인페이지
 
-![](https://images.velog.io/images/pmk4236/post/ae4ed29d-8ac0-481e-839c-93368452f042/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202021-04-11%20%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE%204.02.08.png)
+![](<img width="1440" alt="image" src="https://github.com/jeewoonk/likelion_hackathon/assets/66114269/46418c0d-235d-48d7-aae7-4be7c33db5a7">
+)
 
 - Header에 당근마켓 사이트(PC버전) 없는 로그인 / 회원가입 버튼을 추가했습니다.
 
