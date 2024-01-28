@@ -18,15 +18,19 @@
 	justify-content: center;
 	color: black;
 	background-color: #f1f1f1;
+	font-family: NanumSquareNeo;
 }
 
 .category h1 {
 	font-size: 40px;
 	margin: 50px auto 30px auto;
+	font-family: NanumSquareNeo;
 }
 
 .category p {
 	margin: 5px auto 5px auto;
+	font-family: NanumSquareNeo;
+	letter-spacing: 0.5px;
 }
 
 .item-wrapper {
@@ -47,9 +51,11 @@
 	margin-bottom: 10px;
 	background: #f1f1f1;
 	border-radius: 15px;
-	font-size: 13px;
+	font-size: 18px;
 	color: #254232;
 	font-weight: 700;
+	height: 40px;
+	font-family: Rubik;
 }
 
 .icon {

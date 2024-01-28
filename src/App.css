@@ -36,3 +36,23 @@
     transform: rotate(360deg);
   }
 }
+
+/* * {
+  @import url(../fonts/gilroy/Gilroy-Regular.ttf  format('truetype'));
+  font-family: Gil;
+} */
+
+@font-face {
+  font-family: Gilroy;
+  src: url(./fonts/gilroy/Gilroy-Regular.ttf);
+}
+
+@font-face {
+  font-family: Nanum;
+  src: url(./fonts/NanumSquareNeo/NanumSquareNeo-Variable.ttf);
+}
+
+@font-face {
+  font-family: Libre;
+  src: url(./fonts/Libre_Bodoni/LibreBodoni-VariableFont_wght.ttf);
+}

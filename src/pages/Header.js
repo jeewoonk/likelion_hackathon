@@ -43,17 +43,14 @@ const Header = (props) => {
             </InputWrap>
           </Grid>
           
-          <Grid is_flex maxwidth="500px">
-            {/* <Cat onClick={() => navigate("/category/fresh", {state: { categoryID: 'fresh' }})}> */}
+          <Grid is_flex width="500px">
             <Cat onClick={navigatefresh}>
               FRESH
             </Cat>
             <Cat onClick={navigateprocessed}>
-            {/* <Cat onClick={() => navigate("/category/processed", {state: { categoryID: 'processed' }})}> */}
               PROCESSED
             </Cat>
             <Cat onClick={navigateessential}>
-            {/* <Cat onClick={() => navigate("/category/essential", {state: { categoryID: 'essential' }})}> */}
               ESSENTIALS
             </Cat>
           </Grid>
@@ -77,20 +74,10 @@ Header.defaultProps = {};
 
 export default Header;
 
-// @font-face {
-// 	font-family: 'Gilroy';
-// 	src: local('Gilroy'), url(../fonts/gilroy/Gilroy-Bold.ttf) format('truetype');
-// }  
-
-// const Logo = styled.div`
-//   font-family: Rubik;
-
-// `;
 const Logo = styled.h1`
   color: #161C2D;
   text-align: center;
-  @import url(../fonts/Rubik/Rubik-VariableFont_wght.ttf  format('truetype'));
-  font-family: Rubik;
+  font-family: Nanum;
   font-size: 24px;
   font-style: normal;
   font-weight: 700;
@@ -118,6 +105,7 @@ const Input = styled.input`
   -webkit-appearance: none;
   margin-top: 3px;
   background-color: transparent;
+  font-family: Nanum;
 `;
 
 const Image = styled.img`
@@ -125,9 +113,13 @@ const Image = styled.img`
 `;
 
 const Cat = styled.h1`
-  width: 120px;
+  // width: 120px;
   vertical-align: middle;
   font-size: 20px;
+  font-weight: 300;
+  // display: flex;
+  // justify-content: space-between;
+  // max-width: 500px;
 `
 
 const Button = styled.button`
@@ -145,4 +137,5 @@ const Button = styled.button`
   background-color: #ffffff;
   color: #000000;
   font-size: 14px;
+  font-family: Nanum;
 `;
