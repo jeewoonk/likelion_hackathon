@@ -27,7 +27,7 @@ Companionship에 초점을 맞춤
 
 ### 1. 메인페이지
 
-![](<img width="1440" alt="image" src="https://github.com/jeewoonk/likelion_hackathon/assets/66114269/46418c0d-235d-48d7-aae7-4be7c33db5a7">
+![](<img width="1440" alt="image" src="https://github.com/jeewoonk/likelion_hackathon/assets/Main Page.png">
 )
 
 - Header에 당근마켓 사이트(PC버전) 없는 로그인 / 회원가입 버튼을 추가했습니다.
