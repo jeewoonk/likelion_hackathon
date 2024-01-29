@@ -35,14 +35,19 @@ const ItemDetails = () => {
                     <Price> US ${item.price} / ea</Price>
                     <Quantity> 수량: {item.quantity}개</Quantity>
                     <Seller>
-                        Seller: {item.userid}
+                        판매자: {item.userid}
                         {/* Rating */}
                         {/* <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/ico_star.png" className="star"></img> */}
                     </Seller>
                     <Hr />
                     <Description>
                         {item.description}
+                        {/* <br />
+                        유통기한: {item.expiration} */}
                     </Description>
+                    <Expiration>
+                    유통기한: {item.expiration}
+                    </Expiration>
                     <Button>채팅 보내기</Button>
                 </DIV2>
             </MainContainer>
@@ -115,13 +120,20 @@ const Hr = styled.hr`
     height: 1px;
     background-color: #ccc; // You can change the color as needed
     margin: 10px 0; // Adjust spacing around the line
-`;
+`
 
 const Description = styled.p`
     font-size: 20px;
     margin-top: 70px;
     letter-spacing: 1px;
     line-height: 2.5rem;
+`
+
+const Expiration = styled.p`
+font-size: 20px;
+margin-top: 70px;
+letter-spacing: 1px;
+line-height: 2.5rem;
 `
 
 const Button = styled.button`
@@ -137,5 +149,5 @@ const Button = styled.button`
     background-color: #254232;
     color: #fff;
     font-size: 25px;
-    margin-top: 100px;
+    margin-top: 30px;
 `
